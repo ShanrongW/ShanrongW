@@ -60,6 +60,7 @@ body {
       transparent 26px
     ),
     linear-gradient(160deg, var(--parchment-light) 0%, var(--parchment-mid) 48%, var(--parchment-deep) 100%);
+  background-attachment: fixed;
 }
 
 body::before {
