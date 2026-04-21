@@ -10,7 +10,7 @@ import {
 const skills = [
   {
     category: "Languages",
-    items: ["C++", "JavaScript", "TypeScript", "Java", "Rust", "HTML", "CSS", "LabVIEW"]
+    items: ["C++", "Java", "Python", "Rust", "JavaScript", "TypeScript",  "HTML", "CSS", "LabVIEW", "MIPS Assembly"]
   },
   {
     category: "Frameworks",
@@ -18,7 +18,7 @@ const skills = [
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "GitLab", "Docker", "VSCode", "Supabase", "WSL2"],
+    items: ["Linux", "Git", "GitHub", "GitLab", "Docker", "VSCode", "Supabase", "WSL2"],
   },
 ];
 
@@ -82,7 +82,7 @@ const extracurriculars = [
   },
   {
     title: "SIGmobile",
-    date: "Oct 2025 – Present",
+    date: "Oct 2025 – Feb 2026",
     role: "Backend Developer",
     impact:
       "Contributed to the backend of a CS Course Recommender mobile app designed to help students discover relevant computer science courses. Collected and processed course data by scraping the UIUC Course API and assigning interest-based tags to courses, helping improve the app’s ability to generate more personalized recommendations.",
@@ -122,13 +122,13 @@ export default function HomePage() {
             <GearIcon className="hero-clock-gear" />
           </div>
           <p className="hero-text">
-            Hi! I am Shanrong Wu.
+            Hi! I am <strong>Shanrong Wu</strong>.
           </p>
           <p className="hero-text">
-            A freshman studying Computer Science at University of Illinois Urbana-Champaign and a software engineer.
+            Computer Science student at the <strong>University of Illinois Urbana-Champaign</strong>.
           </p>
           <p className="hero-text">
-            I am interested in several topics in software engineering like robots, systems, AI/ML, and cybersecurity.
+            Aspiring Software Engineer wanting to specialize in systems, robotics, and AI/ML.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/#projects" prefetch={false}>
@@ -145,7 +145,7 @@ export default function HomePage() {
             </Link>
           </div>
           <ul className="hero-tags" aria-label="Core strengths">
-            <li>Robots</li>
+            <li>Robotics</li>
             <li>Systems</li>
             <li>App Development</li>
           </ul>
