@@ -1,24 +1,18 @@
-import Link from "next/link";
 import Image from "next/image";
-import {
-  ClockIcon,
-  GearIcon,
-  PortfolioShell,
-  SectionHeading,
-} from "./components/portfolio-ui";
+import { PortfolioShell } from "./components/portfolio-ui";
 
 const skills = [
   {
     category: "Languages",
-    items: ["C++", "Java", "Python", "Rust", "JavaScript", "TypeScript",  "HTML", "CSS", "LabVIEW", "MIPS Assembly"]
+    items: ["C++", "C", "Python", "Rust", "Java", "JavaScript", "TypeScript",  "HTML", "CSS", "LabVIEW", "MIPS Assembly", "SQL"]
   },
   {
     category: "Frameworks",
-    items: ["Next.js", "React", "React Native", "ROS2"],
+    items: ["Next.js", "React", "React Native", "TailWindCSS", "ROS2"],
   },
   {
     category: "Tools",
-    items: ["Linux", "Git", "GitHub", "GitLab", "Docker", "VSCode", "Supabase", "WSL2"],
+    items: ["Linux", "Git", "Codex", "Shell", "GitHub", "GitLab", "Docker", "VSCode", "Neovim", "Supabase", "PostgreSQL"],
   },
 ];
 
@@ -28,8 +22,8 @@ const education = [
     institution: "University of Illinois Urbana-Champaign",
     degree: "B.S. in Computer Science",
     relevantCoursework:
-      "Introduction to Computer Science I, Introduction to Computer Science II (Honors), Discrete Structures, Data Structures, Computer Architecture, Software Design Lab",
-    gpa: "3.88",
+      "Introduction to Computer Science I, Introduction to Computer Science II (Honors), Discrete Structures, Data Structures, Computer Architecture, Software Design Lab, System Programming, Database Systems, Open Source Software for Education",
+    gpa: "3.94",
   },
   {
     period: "2021 - 2025",
@@ -40,33 +34,41 @@ const education = [
 
 const projects = [
   {
-    title: "HackIllinois 2026 – HackAstra",
-    year: "Feb 2026",
+    title: "Linux Themed Portfolio",
+    year: "September 2026",
     summary:
-      "Built an AI-powered inspection tool with a team of 3 for Caterpillar Track that automated daily inspections using audio, video, and images. Developed full-stack features in React and Flask, integrated Gemini for real-time feedback, added inspection history tracking, and improved reporting by converging same day inspections into unified reports.",
+      "Created a linux terminal themed portfolio to display my education, experiences, projects, and more",
+    stack: ["React", "Next.JS", "TypeScript", "TailwindCSS"]
+    href: "https://shanrong.dev"
+  },
+  {
+    title: "HackIllinois 2026 – HackAstra",
+    year: "February 2026",
+    summary:
+      "Built an AI-powered daily inspection tool with a three-person team for HackIllinois' Caterpillar track. Developed React and Flask features that use Gemini to provide real-time feedback on audio, video, and images. Added inspection history and combined same-day inspections into a single report.",
     stack: ["React", "Python", "Flask", "Gemini API", "Supermemory"],
     href: "https://github.com/Udog-ILLINOIS/BucketFly",
   },
   {
     title: "Raytracer in Rust",
-    year: "Oct 2025 – Jan 2026",
+    year: "October 2025 – January 2026",
     summary:
-      "Developed a Rust ray tracer with a 3-person team, implementing STL mesh processing and Moller-Trumbore triangle intersection for accurate rendering. Optimized performance by about 10x with parallelism, multithreading, and denoising, and built custom scenes to test rendering quality and composition.",
+      "Developed a ray tracer in Rust with a three-person team. Implemented STL mesh processing and Moller-Trumbore ray-triangle intersection, and achieved roughly a 10x speedup through parallel processing and denoising. Created custom scenes to evaluate rendering quality and composition.",
     stack: ["Rust"],
     href: "https://github.com/pranavpopuri/raytracing-in-rust",
   },
   {
     title: "IlliniBites",
-    year: "Sep 2025 – Dec 2025",
+    year: "September 2025 – December 2025",
     summary:
-      "Helped create IlliniBites, a mobile application built with a team using React Native, focused on improving user experience through intuitive navigation and content discovery. Contributed by implementing filtering and sorting features that help users browse and find content based on specific topics.",
+      "Implemented topic-based filtering and sorting for IlliniBites, a team-built React Native mobile app. These tools let users narrow down content by topic and organize results to find what interests them.",
     stack: ["TypeScript", "React Native", "Expressjs", "HTML/CSS"],
   },
   {
     title: "Paradox",
-    year: "Jul 2025 – Aug 2025",
+    year: "July 2025 – August 2025",
     summary:
-      "Built an interactive web application for a Paradox game clan using Next.js, React, and JavaScript to manage and track user and clan data attributes. Improved logging efficiency by replacing manual Google Sheets workflows with a Supabase database and built responsive data visualizations for clan and user metrics.",
+      "Built a Next.js and React web app to manage player and clan data for a Paradox game clan. Replaced manual Google Sheets tracking with a Supabase database and created responsive visualizations of player and clan metrics.",
     stack: ["JavaScript", "React", "Next.js", "HTML/CSS", "TailwindCSS", "Supabase"],
     href: "https://github.com/ShanrongW/paradox",
   },
@@ -74,25 +76,39 @@ const projects = [
 
 const extracurriculars = [
   {
+    title: "SIGPwny",
+    date: "September 2026 - Present",
+    role: "Embedded Team Member",
+    impact:
+      "Learning embedded systems, embedded cybersecurity, and cybersecurity and competing in CSAW ESC 2026 by working with the team and on the IoT part of the qualifications paper"
+  },
+  {
+    title: "Open Source Software CS Course",
+    date: "August 2026 - Present",
+    role: "Contributor / Student",
+    impact: 
+      "Developing code to contribute to open source PrairieLearn through the course using software engineering concepts and implementing pl-kmap element, Karnough Map, with a partner using Python, Mustache, and HTML/CSS/JS"
+  },
+  {
     title: "SIGrobotics - F1Tenth",
-    date: "Sep 2025 – Present",
+    date: "September 2025 – May 2026",
     role: "Simulation / Programmer",
     impact:
-      "Contributed to autonomous driving functionality for the F1TENTH racecar in simulation using C++, ROS 2, PID control, and path planning algorithms across multiple track layouts. Collaborated in weekly team meetings to track progress and refine project goals ahead of competition.",
+      "Developed autonomous driving features for a simulated F1TENTH racecar using C++ and ROS 2. Worked on PID control and path planning across multiple track layouts, coordinating with teammates to prepare for competition",
   },
   {
     title: "SIGmobile",
-    date: "Oct 2025 – Feb 2026",
+    date: "October 2025 – May 2026",
     role: "Backend Developer",
     impact:
-      "Contributed to the backend of a CS Course Recommender mobile app designed to help students discover relevant computer science courses. Collected and processed course data by scraping the UIUC Course API and assigning interest-based tags to courses, helping improve the app’s ability to generate more personalized recommendations.",
+      "Built backend features for a mobile app that helps students find computer science courses aligned with their interests. Collected and processed data from the UIUC Course API, then tagged courses by interest to support personalized recommendations.",
   },
   {
     title: "FIRST Robotics Competition",
-    date: "Aug. 2021 – May 2025",
+    date: "August 2021 – May 2025",
     role: "Software Lead, Technician, Programmer, Electrical",
     impact:
-      "Trained team members in Java and LabVIEW through hands-on demonstrations and coding support. Played a key role in robot development by contributing to programming, wiring, testing, and control tuning, while resolving electrical and software issues to reduce failures during competition. Also supported system upgrades by transitioning legacy software and hardware tools to more current platforms and standards.",
+      "As software lead, taught teammates Java and LabVIEW through hands-on demonstrations and coding support. Programmed, wired, and tested competition robots, tuned controls, and troubleshot electrical and software failures during competition. Helped migrate legacy software and hardware tools to newer platforms.",
   },
 ];
 
@@ -111,172 +127,72 @@ const contactOptions = [
   },
 ];
 
+function SectionHeading({ number, title, command }: { number: string; title: string; command: string }) {
+  return <div className="section-heading"><div><span className="section-number">{number} /</span><h2>{title}</h2></div><p>{command}</p></div>;
+}
+
+function TerminalBar({ title }: { title: string }) {
+  return <div className="terminal-bar"><span className="window-dots" aria-hidden="true"><i /><i /><i /></span><span>{title}</span><span aria-hidden="true">−</span></div>;
+}
+
 export default function HomePage() {
   return (
     <PortfolioShell>
-      <section id="home" className="panel hero reveal delay-1">
+      <section id="home" className="hero">
         <div className="hero-copy">
-          <h1 className="hero-title">Shanrong Wu</h1>
-          <div className="hero-clockline" aria-hidden="true">
-            <ClockIcon className="hero-clock" />
-            <GearIcon className="hero-clock-gear" />
-          </div>
-          <p className="hero-text">
-            Hi! I am <strong>Shanrong Wu</strong>.
-          </p>
-          <p className="hero-text">
-            Computer Science student at the <strong>University of Illinois Urbana-Champaign</strong>.
-          </p>
-          <p className="hero-text">
-            Aspiring Software Engineer wanting to specialize in systems, robotics, and AI/ML.
-          </p>
+          <p className="eyebrow"><span className="status-dot" /> HELLO, WORLD. I’M</p>
+          <h1>Shanrong{" "}<span>Wu<span className="hero-cursor" aria-hidden="true">_</span></span></h1>
+          <p className="hero-role">Computer science student.<br />Aspiring software engineer.</p>
+          <p className="hero-description">Studying at the University of Illinois Urbana-Champaign.</p>
           <div className="hero-actions">
-            <Link className="button button-primary" href="/#projects" prefetch={false}>
-              <span className="button-label">Explore Experience</span>
-              <span className="button-gear" aria-hidden="true">
-                <GearIcon className="button-gear-icon" />
-              </span>
-            </Link>
-            <Link className="button" href="/#contact" prefetch={false}>
-              <span className="button-label">Reach Out</span>
-              <span className="button-gear" aria-hidden="true">
-                <GearIcon className="button-gear-icon" />
-              </span>
-            </Link>
+            <a className="button" href="/resume.pdf" target="_blank" rel="noreferrer" data-command="running ./resume -firstname shanrong -lastname wu"><span aria-hidden="true">./</span> resume <span aria-hidden="true">↗</span><span className="sr-only"> (PDF, opens in a new tab)</span></a>
+            <a className="button button-primary" href="#contact" data-command="cd ~/contact"><span aria-hidden="true">./</span> Let's Connect! <span aria-hidden="true">↗</span></a>
           </div>
-          <ul className="hero-tags" aria-label="Core strengths">
-            <li>Robotics</li>
-            <li>Systems</li>
-            <li>App Development</li>
-          </ul>
+          <ul className="hero-tags" aria-label="Interests"><li>System Programming</li><li>Embedded Systems</li><li>Software Engineering</li></ul>
         </div>
-        <Image
-          width={100}
-          height={100}
-          className="about-image"
-          src="/me.jpg"
-          alt="my image"
-          loading="lazy"
-        />
+        <div className="terminal-window profile-window">
+          <TerminalBar title="shanrong@portfolio: ~" />
+          <div className="profile-content">
+            <p className="prompt"><span>~ $</span> whoami</p>
+            <Image width={520} height={520} className="portrait" src="/me.jpg" alt="Portrait of Shanrong Wu" priority sizes="(max-width: 760px) 85vw, 350px" />
+            <div className="profile-details"><p><span>name</span> Shanrong Wu</p><p><span>school</span> UIUC</p><p><span>major</span> Computer Science</p></div>
+            <p className="profile-output"><span aria-hidden="true">↳</span> Systems · Embedded · Robotics</p>
+          </div>
+        </div>
+        <div className="hero-bottom"><span>~/shanrong/portfolio</span><a href="#education" data-command="cd ~/education">scroll to explore <span aria-hidden="true">↓</span></a></div>
       </section>
 
-      <section id="education" className="section reveal delay-3">
-        <SectionHeading title="Education" />
-        <div className="timeline mt-5">
-          {education.map((item) => (
-            <article className="timeline-item" key={item.institution}>
-              <p className="timeline-years">{item.period}</p>
-              <h3>{item.institution}</h3>
-              <p className="timeline-degree">{item.degree}</p>
-              <p className="timeline-detail">
-                {item.relevantCoursework ? <span className="timeline-label">Relevant Coursework:</span> : <span></span>} {item.relevantCoursework}
-              </p>
-              <p className="timeline-detail">
-                <span className="timeline-label">GPA:</span> {item.gpa}
-              </p>
-            </article>
-          ))}
+      <section id="education" className="section">
+        <SectionHeading number="01" title="Education" command="cat education.txt" />
+        <div className="education-list">
+          {education.map((item) => <article className="education-card" key={item.institution}><p className="date">{item.period}</p><div><h3>{item.institution}</h3>{item.degree && <p className="degree">{item.degree}</p>}{item.relevantCoursework && <p className="coursework"><span>Relevant coursework</span>{item.relevantCoursework}</p>}</div><p className="gpa"><span>GPA</span>{item.gpa}</p></article>)}
         </div>
       </section>
 
-      <section id="skills" className="section reveal delay-2">
-        <SectionHeading title="Skills" />
-        <div className="skills-rows mt-5">
-          {skills.map((skill) => (
-            <article className="skill-row" key={skill.category}>
-              <h3 className="skill-heading">{skill.category}</h3>
-              <ul className="skill-tags" aria-label={`${skill.category} skills`}>
-                {skill.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
+      <section id="skills" className="section">
+        <SectionHeading number="02" title="Skills" command="ls ~/skills" />
+        <div className="skills-grid">{skills.map((skill, index) => <article className="terminal-window skill-card" key={skill.category}><TerminalBar title={skill.category.toLowerCase()} /><div className="skill-content"><span className="file-index">0{index + 1}</span><h3>{skill.category}</h3><ul className="skill-tags" aria-label={`${skill.category} skills`}>{skill.items.map(item => <li key={item}>{item}</li>)}</ul></div></article>)}</div>
       </section>
 
-
-      <section id="resume" className="panel resume-panel section reveal delay-4">
-        <SectionHeading title="Resume" />
-        <div className="resume-actions mt-5">
-          <a
-            className="button button-primary"
-            href="/resumes/robotics-resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="button-label">View Robotics Resume</span>
-            <span className="button-gear" aria-hidden="true">
-              <GearIcon className="button-gear-icon" />
-            </span>
-          </a>
-          <a
-            className="button"
-            href="/resumes/software-engineering-resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="button-label">View Software Engineering Resume</span>
-            <span className="button-gear" aria-hidden="true">
-              <GearIcon className="button-gear-icon" />
-            </span>
-          </a>
-        </div>
+      <section id="resume" className="section resume-section">
+        <div><p className="eyebrow">THE SHORT VERSION</p><h2>My experience, in one pdf.</h2><p>Education, projects, and the work behind them.</p></div>
+        <a className="button button-primary" href="/resume.pdf" target="_blank" rel="noreferrer" data-command="running ./resume -firstname shanrong -lastname wu">./resume <span aria-hidden="true">↗</span><span className="sr-only"> (PDF, opens in a new tab)</span></a>
       </section>
 
-      <section id="projects" className="section reveal delay-5">
-        <SectionHeading title="Projects" />
-        <div className="card-grid mt-5">
-          {projects.map((project) => (
-            <article className="steam-card" key={project.title}>
-              <p className="chip">{project.year}</p>
-              <h3>{project.title}</h3>
-              <p className="stack-line">{project.stack.join(" | ")}</p>
-              <p className="pt-2">{project.summary}</p>
-              {project.href ? (
-                <a className="inline-link" href={project.href} target="_blank" rel="noreferrer">
-                  View Project
-                </a>
-              ) : null}
-            </article>
-          ))}
-        </div>
+      <section id="projects" className="section">
+        <SectionHeading number="03" title="Projects" command="ls ~/projects" />
+        <div className="projects-grid">{projects.map((project, index) => <article className="terminal-window project-card" key={project.title}><TerminalBar title={`project_${String(index + 1).padStart(2, "0")}`} /><div className="project-content"><div className="project-meta"><span className="folder-icon" aria-hidden="true">~/</span><p className="date">{project.year}</p></div><h3>{project.title}</h3><p className="project-summary">{project.summary}</p><ul className="project-stack" aria-label="Technologies">{project.stack.map(item => <li key={item}>{item}</li>)}</ul>{project.href ? <a className="project-link" href={project.href} target="_blank" rel="noreferrer" data-command={`xdg-open ${project.href}`}>View repository <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a> : <p className="project-note">Team project · React Native application</p>}</div></article>)}</div>
       </section>
 
-      <section id="extracurricular" className="section reveal delay-6">
-        <SectionHeading title="Extracurriculars" />
-        <div className="extras-grid mt-5">
-          {extracurriculars.map((activity) => (
-            <article className="extra-card" key={activity.title}>
-              <h3>{activity.title}</h3>
-              <p className="extra-date">{activity.date}</p>
-              <p className="extra-role">{activity.role}</p>
-              <p>{activity.impact}</p>
-            </article>
-          ))}
-        </div>
+      <section id="extracurricular" className="section">
+        <SectionHeading number="04" title="Extracurriculars" command="cat activities.log" />
+        <div className="activities-list">{extracurriculars.map((activity, index) => <article className="activity-card" key={activity.title}><span className="activity-index" aria-hidden="true">0{index + 1}</span><div><div className="activity-heading"><h3>{activity.title}</h3><p className="date">{activity.date}</p></div><p className="activity-role">{activity.role}</p><p className="activity-description">{activity.impact}</p></div></article>)}</div>
       </section>
 
-      <section id="contact" className="section reveal">
-        <SectionHeading title="Contact" />
-        <div className="contact-wrap mt-5">
-          {contactOptions.map((option) => {
-            const opensNewTab = option.href.startsWith("http");
-
-            return (
-              <a
-                key={option.label}
-                className="contact-card contact-method-card"
-                href={option.href}
-                target={opensNewTab ? "_blank" : undefined}
-                rel={opensNewTab ? "noreferrer" : undefined}
-              >
-                <p className="contact-method-label">{option.label}</p>
-                <p className="contact-method-value">{option.value}</p>
-              </a>
-            );
-          })}
-        </div>
+      <section id="contact" className="section contact-section">
+        <SectionHeading number="05" title="Let’s connect." command="./say-hello" />
+        <p className="contact-intro">Have a project in mind, a question, or just want to say hello?</p>
+        <div className="contact-grid">{contactOptions.map(option => { const external = option.href.startsWith("http"); return <a key={option.label} className="contact-card" href={option.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} data-command={`${option.label === "Email" ? "mail" : option.label === "Phone" ? "sms" : "open"} ${option.href}`}><span className="contact-label">{option.label}<span aria-hidden="true">↗</span></span><span className="contact-value">{option.value}</span>{external && <span className="sr-only"> (opens in a new tab)</span>}</a>; })}</div>
       </section>
     </PortfolioShell>
   );
