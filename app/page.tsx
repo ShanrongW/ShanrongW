@@ -38,7 +38,7 @@ const projects = [
     year: "September 2026",
     summary:
       "Created a linux terminal themed portfolio to display my education, experiences, projects, and more",
-    stack: ["React", "Next.JS", "TypeScript", "TailwindCSS"]
+    stack: ["React", "Next.JS", "TypeScript", "TailwindCSS"],
     href: "https://shanrong.dev"
   },
   {
