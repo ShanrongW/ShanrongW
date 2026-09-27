@@ -39,7 +39,9 @@ const projects = [
     summary:
       "Created a linux terminal themed portfolio to display my education, experiences, projects, and more",
     stack: ["React", "Next.JS", "TypeScript", "TailwindCSS"],
-    href: "https://shanrong.dev"
+    href: "https://shanrong.dev",
+    linkLabel: "View website",
+    command: "running ./website --inside website",
   },
   {
     title: "HackIllinois 2026 – HackAstra",
@@ -181,7 +183,7 @@ export default function HomePage() {
 
       <section id="projects" className="section">
         <SectionHeading number="03" title="Projects" command="ls ~/projects" />
-        <div className="projects-grid">{projects.map((project, index) => <article className="terminal-window project-card" key={project.title}><TerminalBar title={`project_${String(index + 1).padStart(2, "0")}`} /><div className="project-content"><div className="project-meta"><span className="folder-icon" aria-hidden="true">~/</span><p className="date">{project.year}</p></div><h3>{project.title}</h3><p className="project-summary">{project.summary}</p><ul className="project-stack" aria-label="Technologies">{project.stack.map(item => <li key={item}>{item}</li>)}</ul>{project.href ? <a className="project-link" href={project.href} target="_blank" rel="noreferrer" data-command={`xdg-open ${project.href}`}>View repository <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a> : <p className="project-note">Team project · React Native application</p>}</div></article>)}</div>
+        <div className="projects-grid">{projects.map((project, index) => <article className="terminal-window project-card" key={project.title}><TerminalBar title={`project_${String(index + 1).padStart(2, "0")}`} /><div className="project-content"><div className="project-meta"><span className="folder-icon" aria-hidden="true">~/</span><p className="date">{project.year}</p></div><h3>{project.title}</h3><p className="project-summary">{project.summary}</p><ul className="project-stack" aria-label="Technologies">{project.stack.map(item => <li key={item}>{item}</li>)}</ul>{project.href ? <a className="project-link" href={project.href} target="_blank" rel="noreferrer" data-command={project.command ?? `xdg-open ${project.href}`}>{project.linkLabel ?? "View repository"} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a> : <p className="project-note">Team project · React Native application</p>}</div></article>)}</div>
       </section>
 
       <section id="extracurricular" className="section">
